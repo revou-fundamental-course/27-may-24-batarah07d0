@@ -1,0 +1,45 @@
+.logo-icon > img {
+  width: 40px;
+  height: 40px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav > .menu {
+  display: flex;
+  align-items: center;
+}
+
+nav > .menu > a {
+  border: 1px solid black;
+  padding: 5px 30px;
+}
+
+nav > .menu > a:first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+nav > .menu > a:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+.banner-container {
+  height: 258px;
+  border: 1px solid black;
+}
+
+.our-facilities {
+  display: flex;
+  justify-content: space-around;
+}
+
+.form-message-us {
+  display: flex;
+}
+
+.result-form-message-us {
+  width: 100%;
+}
