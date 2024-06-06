@@ -3,16 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Website</title>
+    <title>School Profile</title>
     <link rel="stylesheet" href="/27-may-24-batarah07d0/css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
   </head>
   <body>
     <nav>
       <div class="logo-icon">
-        <img
-          src="https://storage.googleapis.com/danacita-website-v3-prd/website_v3/images/Revou-alasan.original.png"
-          alt="Logo RevoU"
-        />
+        <img src="/27-may-24-batarah07d0/assets/logo/7840135.jpg" alt="" />
       </div>
       <section class="menu">
         <a class="nav-icon" href="#home">Home</a>
@@ -27,18 +29,48 @@
       <!-- Home -->
       <section id="home">
         <header>
-          <h1>My Website</h1>
+          <h1>Hi <span id="name"></span> Welcome to Our School</h1>
         </header>
 
         <article>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
-            quae cumque deserunt facere ea architecto blanditiis nulla ut
-            pariatur cum, nam at fugit corrupti assumenda molestias commodi
-            nihil nemo quod.
+          <p style="margin-top: 2px">
+            Sekolah Kami Menyediakan Lingkungan Belajar yang Inspiratif dan
+            Mendukung untuk Membantu Siswa dan Siswi Agar Dapat Berkembang dan
+            Meraih Potensi Maksimal Mereka.
           </p>
 
-          <div class="banner-container"></div>
+          <div class="banner-container">
+            <img
+              class="img-slides"
+              src="/27-may-24-batarah07d0/assets/banner/photo-1509062522246-3755977927d7.avif"
+              alt=""
+            />
+            <img
+              class="img-slides"
+              src="/27-may-24-batarah07d0/assets/banner/photo-1527891751199-7225231a68dd.avif"
+              alt=""
+            />
+            <img
+              class="img-slides"
+              src="/27-may-24-batarah07d0/assets/banner/photo-1588072432836-e10032774350.avif"
+              alt=""
+            />
+            <img
+              class="img-slides"
+              src="/27-may-24-batarah07d0/assets/banner/photo-1608167049194-9f9ba353a8f8.avif"
+              alt=""
+            />
+            <img
+              class="img-slides"
+              src="/27-may-24-batarah07d0/assets/banner/photo-1613896527026-f195d5c818ed.avif"
+              alt=""
+            />
+            <img
+              class="img-slides"
+              src="/27-may-24-batarah07d0/assets/banner/photo-1620003048292-c4db88559488.avif"
+              alt=""
+            />
+          </div>
         </article>
       </section>
 
@@ -52,24 +84,33 @@
 
         <article class="our-facilities">
           <div>
-            <div
-              style="width: 50px; height: 50px; border: 1px solid black"
-            ></div>
-            <p>Profesional Teacher</p>
+            <div class="facilities-img">
+              <img
+                src="/27-may-24-batarah07d0/assets/facilities/photo-1580582932707-520aed937b7b.avif"
+                alt=""
+              />
+            </div>
+            <p>Class Room</p>
           </div>
 
           <div>
-            <div
-              style="width: 50px; height: 50px; border: 1px solid black"
-            ></div>
-            <p>Profesional Teacher</p>
+            <div class="facilities-img">
+              <img
+                src="/27-may-24-batarah07d0/assets/facilities/photo-1606761568499-6d2451b23c66.avif"
+                alt=""
+              />
+            </div>
+            <p>Lecture Theater</p>
           </div>
 
           <div>
-            <div
-              style="width: 50px; height: 50px; border: 1px solid black"
-            ></div>
-            <p>Profesional Teacher</p>
+            <div class="facilities-img">
+              <img
+                src="/27-may-24-batarah07d0/assets/facilities/premium_photo-1682284353484-4e16001c58eb.avif"
+                alt=""
+              />
+            </div>
+            <p>Library</p>
           </div>
         </article>
       </section>
@@ -87,54 +128,84 @@
       <!-- Form -->
       <section class="form-message-us">
         <section>
-          <form action="">
+          <form id="message-form" onsubmit="return formValidation()">
             <div>
-              <label for="nama">Nama :</label>
-              <input type="text" name="nama" id="nama" />
+              <label for="nama"><b>Nama</b></label>
+              <br />
+              <input
+                type="text"
+                placeholder="Your Name"
+                name="nama"
+                id="name-input"
+                required
+              />
             </div>
             <div>
-              <label for="tglLahir">Tanggal Lahir :</label>
-              <input type="date" name="tglLahir" id="tglLahir" />
+              <label for="tgl-lahir"><b>Tanggal Lahir</b></label>
+              <br />
+              <input type="date" name="tgl-lahir" id="tgl-lahir" required />
             </div>
             <div>
-              <label for="jenisKelamin">Jenis Kelamin :</label>
+              <label for="jenis-kelamin"><b>Jenis Kelamin</b></label>
+              <br />
               <input
                 type="radio"
-                name="jenisKelamin"
+                name="jenis-kelamin"
                 id="laki-laki"
-                value="Laki-Laki"
+                value="laki-Laki"
+                required
               />
               <label for="laki-laki">Laki-Laki</label>
               <input
                 type="radio"
-                name="jenisKelamin"
+                name="jenis-kelamin"
                 id="perempuan"
-                value="Perempuan"
+                value="perempuan"
+                required
               />
               <label for="perempuan">Perempuan</label>
             </div>
             <div>
-              <label for="pesan">Pesan :</label>
+              <label for="pesan"><b>Pesan</b></label>
+              <br />
               <textarea
                 name="pesan"
                 id="pesan"
                 placeholder="Pesan"
-                rows="4"
+                rows="5"
+                cols="30"
+                required
               ></textarea>
             </div>
             <div>
-              <input type="submit" value="submit" />
+              <input
+                type="button"
+                onclick="formValidation()"
+                value="Kirim Pesan"
+              />
             </div>
           </form>
         </section>
 
         <!-- Form Result -->
         <section class="result-form-message-us">
-          <div style="border: 1px solid black; height: 100px"></div>
+          <div>
+            <h3>Your Message</h3>
+            <p>Name : <span id="sender-name"></span></p>
+            <p>Birth Date : <span id="sender-bd"></span></p>
+            <p>Gender : <span id="sender-gender"></span></p>
+            <p>Message : <br></b><span id="sender-message"></span></p>
+          </div>
         </section>
       </section>
     </section>
 
-    <footer></footer>
+    <hr />
+
+    <footer>
+      <p style="text-align: end">Created By Batara Hotdo</p>
+    </footer>
+
+    <script src="/27-may-24-batarah07d0/js/index.js"></script>
   </body>
 </html>
