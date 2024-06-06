@@ -1,43 +1,31 @@
 /* Google Font - Poppins */
 body {
   font-family: "Poppins", sans-serif;
+  padding: 0 20px 0 20px;
+  font-size: 18px;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: black;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0;
 }
 
 h1 {
   margin-top: 20px;
   margin-bottom: 10px;
+  font-size: 32px;
 }
 
-/* Handphone */
-@media only screen and (max-width: 767px) {
-  body {
-    font-size: 14px;
-  }
-  h1 {
-    font-size: 24px;
-  }
-  h2 {
-    font-size: 20px;
-  }
-  p {
-    font-size: 14px;
-  }
+h2 {
+  font-size: 28px;
 }
 
-/* Laptop/Desktop */
-@media only screen and (min-width: 768px) {
-  body {
-    font-size: 18px;
-  }
-  h1 {
-    font-size: 32px;
-  }
-  h2 {
-    font-size: 28px;
-  }
-  p {
-    font-size: 18px;
-  }
+p {
+  font-size: 18px;
 }
 
 .logo-icon > img {
@@ -75,7 +63,7 @@ nav > .menu > a:last-child {
 }
 
 .banner-container {
-  height: 400px;
+  height: 500px;
   width: auto;
   overflow: hidden;
 }
@@ -89,17 +77,19 @@ nav > .menu > a:last-child {
 
 .our-facilities {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .our-facilities > div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 20px 0 20px;
 }
 
 .facilities-img {
-  height: 150px;
+  height: 200px;
   width: auto;
   overflow: hidden;
 }
@@ -123,6 +113,11 @@ nav > .menu > a:last-child {
 .result-form-message-us > div > p {
   margin: 5px;
 }
+
+.result-form-message-us > div > h3 {
+  margin: 5px;
+}
+
 #message-form {
   display: flex;
   flex-direction: column;
@@ -136,4 +131,99 @@ nav > .menu > a:last-child {
 
 #message-form > div {
   margin: 5px 0 5px 0;
+}
+
+#home {
+  padding-bottom: 30px;
+}
+
+#message-us {
+  padding-bottom: 30px;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Handphone */
+@media only screen and (max-width: 425px) {
+  body {
+    font-size: 14px;
+    padding: 0 10px 0 10px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 14px;
+  }
+
+  .banner-container {
+    height: 200px;
+    width: auto;
+    overflow: hidden;
+  }
+
+  nav > .menu > a:hover {
+    background-color: transparent;
+  }
+
+  .facilities-img {
+    height: 90px;
+    width: auto;
+    overflow: hidden;
+  }
+
+  .form-message-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .result-form-message-us {
+    padding: 10px;
+    margin-top: 20px;
+    width: 360px;
+  }
+
+  #message-form {
+    width: 350px;
+    padding: 15px;
+    margin: 0;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo-icon {
+    align-items: center;
+    padding-bottom: 37px;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 70px;
+    width: 400px;
+    text-align: center;
+  }
+
+  .menu-toggle:checked + .menu {
+    display: block;
+  }
+
+  .menu-icon {
+    display: block;
+  }
 }

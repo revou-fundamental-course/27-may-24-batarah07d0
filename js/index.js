@@ -1,9 +1,13 @@
 function replaceName() {
   let name = prompt("Please Enter Your Name!", "");
-  document.getElementById("name").innerHTML = name;
+  if (!name) {
+    return;
+  } else {
+    document.getElementById("name").innerHTML = name + ",";
+  }
 }
 
-replaceName();
+// replaceName();
 
 // Auto Slides
 var slideIndex = 1;
