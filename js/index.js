@@ -7,7 +7,7 @@ function replaceName() {
   }
 }
 
-// replaceName();
+replaceName();
 
 // Auto Slides
 var slideIndex = 1;
